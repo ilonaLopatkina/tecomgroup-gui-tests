@@ -1,0 +1,33 @@
+-------------------------------------------------------------------------------
+Test set: SoftwareDevelopmentPageTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 24.91 s <<< FAILURE! -- in SoftwareDevelopmentPageTest
+SoftwareDevelopmentPageTest.discussProjectButton -- Time elapsed: 10.53 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Locator expected to be visible
+Error: element(s) not found
+Call log:
+  - Assert "isVisible" with timeout 5000ms
+  - waiting for locator(".b24-form:visible").first().locator(".b24-form-header-title")
+	at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:69)
+	at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:47)
+	at com.microsoft.playwright.impl.LocatorAssertionsImpl.expectTrue(LocatorAssertionsImpl.java:471)
+	at com.microsoft.playwright.impl.LocatorAssertionsImpl.isVisible(LocatorAssertionsImpl.java:466)
+	at com.microsoft.playwright.assertions.LocatorAssertions.isVisible(LocatorAssertions.java:845)
+	at page.FormValidation.assertVisible(FormValidation.java:20)
+	at SoftwareDevelopmentPageTest.discussProjectButton(SoftwareDevelopmentPageTest.java:63)
+
+SoftwareDevelopmentPageTest.tellAboutProjectButton -- Time elapsed: 7.339 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Locator expected to be visible
+Error: element(s) not found
+Call log:
+  - Assert "isVisible" with timeout 5000ms
+  - waiting for locator("Рассказать про проект")
+	at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:69)
+	at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:47)
+	at com.microsoft.playwright.impl.LocatorAssertionsImpl.expectTrue(LocatorAssertionsImpl.java:471)
+	at com.microsoft.playwright.impl.LocatorAssertionsImpl.isVisible(LocatorAssertionsImpl.java:466)
+	at com.microsoft.playwright.assertions.LocatorAssertions.isVisible(LocatorAssertions.java:845)
+	at SoftwareDevelopmentPageTest.tellAboutProjectButton(SoftwareDevelopmentPageTest.java:69)
+

@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------
+Test set: BroadcastMonitoringPageTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 16.03 s <<< FAILURE! -- in BroadcastMonitoringPageTest
+BroadcastMonitoringPageTest.qligentWebsiteButton -- Time elapsed: 3.517 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Locator expected to be visible
+Error: strict mode violation: locator(".descr:has-text('Вы создаете контент — мы фокусируемся на качестве его доставки')") resolved to 2 elements:
+    1) <div class="descr">Вы создаете контент — мы фокусируемся на качестве…</div> aka getByText("Вы создаете контент — мы фокусируемся на качестве его доставки").nth(1)
+    2) <div class="descr">Вы создаете контент — мы  фокусируемся на качеств…</div> aka getByText("Вы создаете контент — мы фокусируемся на качестве его доставки").nth(2)
+
+Call log:
+  - Assert "isVisible" with timeout 5000ms
+  - waiting for locator(".descr:has-text('Вы создаете контент — мы фокусируемся на качестве его доставки')")
+	at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:69)
+	at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:47)
+	at com.microsoft.playwright.impl.LocatorAssertionsImpl.expectTrue(LocatorAssertionsImpl.java:471)
+	at com.microsoft.playwright.impl.LocatorAssertionsImpl.isVisible(LocatorAssertionsImpl.java:466)
+	at com.microsoft.playwright.assertions.LocatorAssertions.isVisible(LocatorAssertions.java:845)
+	at BroadcastMonitoringPageTest.qligentWebsiteButton(BroadcastMonitoringPageTest.java:88)
+
+BroadcastMonitoringPageTest.selectModelButton -- Time elapsed: 7.606 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Locator expected to be visible
+Error: element(s) not found
+Call log:
+  - Assert "isVisible" with timeout 5000ms
+  - waiting for locator(".b24-form:visible").first().locator(".b24-form-header-title")
+	at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:69)
+	at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:47)
+	at com.microsoft.playwright.impl.LocatorAssertionsImpl.expectTrue(LocatorAssertionsImpl.java:471)
+	at com.microsoft.playwright.impl.LocatorAssertionsImpl.isVisible(LocatorAssertionsImpl.java:466)
+	at com.microsoft.playwright.assertions.LocatorAssertions.isVisible(LocatorAssertions.java:845)
+	at page.FormValidation.assertVisible(FormValidation.java:20)
+	at BroadcastMonitoringPageTest.selectModelButton(BroadcastMonitoringPageTest.java:98)
+

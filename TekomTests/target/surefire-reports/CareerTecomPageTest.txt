@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: CareerTecomPageTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 49.72 s <<< FAILURE! -- in CareerTecomPageTest
+CareerTecomPageTest.workAtTekomFormInvalidData -- Time elapsed: 7.087 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Locator expected to be visible
+Error: strict mode violation: locator("button.t-submit[type='submit']") resolved to 3 elements:
+    1) <button type="submit" class="t-submit">Отправить</button> aka getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Отправить"))
+    2) <button type="submit" class="t-submit"></button> aka getByRole(AriaRole.BUTTON).filter(new Locator.FilterOptions().setHasText(Pattern.compile("^$"))).first()
+    3) <button type="submit" class="t-submit"></button> aka getByRole(AriaRole.BUTTON).filter(new Locator.FilterOptions().setHasText(Pattern.compile("^$"))).nth(1)
+
+Call log:
+  - Assert "isVisible" with timeout 5000ms
+  - waiting for locator("button.t-submit[type='submit']")
+	at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:69)
+	at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:47)
+	at com.microsoft.playwright.impl.LocatorAssertionsImpl.expectTrue(LocatorAssertionsImpl.java:471)
+	at com.microsoft.playwright.impl.LocatorAssertionsImpl.isVisible(LocatorAssertionsImpl.java:466)
+	at com.microsoft.playwright.assertions.LocatorAssertions.isVisible(LocatorAssertions.java:845)
+	at CareerTecomPageTest.workAtTekomFormInvalidData(CareerTecomPageTest.java:175)
+
